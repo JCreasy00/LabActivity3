@@ -6,32 +6,38 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/displayTextView"
-        android:layout_width="411dp"
+    <EditText
+        android:id="@+id/editTextName"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="Hello World!"
-        android:textSize="24sp"
-        tools:layout_editor_absoluteY="53dp" />
+        android:layout_marginTop="32dp"
+        android:hint="@string/enter_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/clickMeButton"
+        android:id="@+id/buttonGreet"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Click Me"
-        tools:layout_editor_absoluteX="154dp"
-        tools:layout_editor_absoluteY="340dp" />
+        android:layout_marginTop="16dp"
+        android:text="@string/greet"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextName" />
 
-    <EditText
-        android:id="@+id/nameEditText"
+    <TextView
+        android:id="@+id/textDisplay"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Enter your name"
-        android:inputType="textPersonName"
-        android:minHeight="48dp"
-        tools:layout_editor_absoluteX="101dp"
-        tools:layout_editor_absoluteY="240dp" />
+        android:layout_marginTop="16dp"
+        android:shadowColor="@color/teal_200"
+        android:shadowDx="40"
+        android:shadowDy="30"
+        android:shadowRadius="30"
+        android:text="Air Supply is the best band EVER!"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonGreet" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
